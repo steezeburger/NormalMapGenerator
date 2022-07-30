@@ -1,32 +1,29 @@
 # Normal Map Generator
 
-Normal Map Generator is a tool written in Python
+Normal Map Generator is a tool written in Python to generate normal maps from plain images.
 
-## Required
+## Install dependencies:
 
-- Python
-- Scipy
-- Numpy
+`$ python -m venv .venv`
+
+`$ source ./venv/bin/activate`
+
+`(.venv) $ pip install -r requirements`
 
 ## Usage
 
-./normal_map_generator.py input_file output_file --smooth SMOOTH_VALUE -- intensity INTENSITY_VALUE
+```
+(.venv) $ ./normal_map_generator.py input_file output_file \
+  --smooth SMOOTH_VALUE \
+  --intensity INTENSITY_VALUE
+```
 
-### Required arguments:
+### Required positional arguments:
 
-#### input_file            
-input image path
-
-#### output_file          
-output image path
+* `input_file` - path to input image
+* `output_file` - path to output filename
 
 ### Optional arguments:
-
-#### -h, --help            
-Show help message
-
-#### -s SMOOTH_VALUE, --smooth SMOOTH_VALUE
-Smooth gaussian blur applied on the image
-
-#### -it INTENSITY_VALUE, --intensity INTENSITY_VALUE
-Intensity of the normal map
+* `-h, --help` - show help message
+* `-s, --smooth` - smooth gaussian blur applied to the image
+* `-it, --intensity` - intensity of normal map
